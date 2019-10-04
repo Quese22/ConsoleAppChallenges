@@ -20,29 +20,36 @@ namespace _01_Challenege_Console
 
         public void RunMenu()
         {
-            Console.WriteLine("Enter the number for the action you would like\n+" +
-                "1.)See all Meals\n+" +
-                "2.)Find Meal by number\n" +
-                "3.)Create a new Meal\n+" +
-                "4.)Remove Meal From Menu\n+" +
-                "");
-
-            string userChoice = Console.ReadLine();
-
-            switch (userChoice)
+            bool choice = true;
+            while (choice)
             {
-                case "1":
-                    DisplayMenuList();
-                    break;
-                case "2":
-                    FindMealByMealNumber();
-                    break;
-                case "3":
-                    MakeNewMenuItem();
-                    break;
-                case "4":
-                    RemoveMenuItem();
-                    break;
+                Console.WriteLine("Enter the number for the action you would like\n+" +
+                    "1.)See all Meals\n+" +
+                    "2.)Find Meal by number\n" +
+                    "3.)Create a new Meal\n+" +
+                    "4.)Remove Meal From Menu\n+" +
+                    "");
+
+                string userChoice = Console.ReadLine();
+
+                switch (userChoice)
+                {
+                    case "1":
+                        DisplayMenuList();
+                        break;
+                    case "2":
+                        FindMealByMealNumber();
+                        break;
+                    case "3":
+                        MakeNewMenuItem();
+                        break;
+                    case "4":
+                        RemoveMenuItem();
+                        break;
+                    default:
+                        choice = false;
+                        break;
+                }
             }
         }
         private void DisplayMenuList()

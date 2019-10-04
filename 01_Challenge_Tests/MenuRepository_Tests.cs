@@ -100,6 +100,8 @@ namespace _01_Challenge_Tests
 
             Menu actual = menuRepo.GetMenuListByNumber(8);
 
+            Assert.AreEqual(item1, actual);
+
 
 
 
